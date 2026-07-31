@@ -1,27 +1,55 @@
 {
   "hero": {
-    "eyebrow": "Greenwood, Indiana",
+    "eyebrow": "Indiana",
     "tagline": "**Business leader.** **Basketball coach.** Husband & dad.",
-    "lede": "I lead operations for a national vacation-rental company by day and the Greenwood Christian Academy boys' basketball program by night, and I write about what each one teaches me about the other. The best thing on my resume? Jessica and our three kids."
+    "lede": "I lead operations for a national vacation company by day and the Greenwood Christian Academy boys' basketball program by night, and I write about what each one teaches me about the other. The best thing on my resume? My wife, Jess and our three kids."
   },
   "stats": [
-    { "headline": "**2026** Sectional Champs", "detail": "IHSAA Class A · GCA Cougars boys basketball" },
-    { "headline": "Head **Coach**", "detail": "Greenwood Christian Academy · since 2025" },
-    { "headline": "SVP of **Operations**", "detail": "Keyholder Vacations · former company President" },
-    { "headline": "Dad of **3**", "detail": "Gio, Luciana & Enzo. My toughest roster yet" }
+    {
+      "headline": "**2026** Sectional Champs",
+      "detail": "IHSAA Class A · GCA Cougars boys basketball"
+    },
+    {
+      "headline": "Head **Coach**",
+      "detail": "Greenwood Christian Academy · since 2025"
+    },
+    {
+      "headline": "SVP of **Operations**",
+      "detail": "Keyholder Vacations"
+    },
+    {
+      "headline": "Dad of **3**",
+      "detail": "Giovanni, Luciana & Enzo. My toughest roster yet."
+    }
   ],
   "coach": {
-    "heading": "Building a program, not just a season",
+    "heading": "Building a program",
     "paragraphs": [
-      "In 2025 I became Head Boys' Basketball Coach at Greenwood Christian Academy. In our first season together, the Cougars won the 2026 IHSAA Class A sectional championship and advanced to the regional round, playing our best basketball when it counted most.",
-      "Basketball has shaped my whole life: point guard and senior-year captain at Southport, six years coaching in the Southport program, where my middle school teams went from three wins to breaking the school's wins record, and founder of IU Film Room, a film-breakdown site for Indiana basketball fans."
+      "In 2025 I became Head Boys' Basketball Coach at Greenwood Christian Academy. In our first season together, the we won the sectional championship and advanced to the regional round, playing our best basketball when it counted most.",
+      "Basketball has shaped my whole life: point guard and senior-year captain at Southport, almost a decade coaching in the Southport program, and founder of IU Film Room, a film-breakdown site for Indiana basketball fans."
     ],
     "timeline_title": "Coaching timeline",
     "timeline": [
-      { "year": "'13", "name": "Southport Middle School", "role": "First head coaching job. Broke the school wins record by year three" },
-      { "year": "'16", "name": "Southport High School staff", "role": "Assistant across grades 7–12: scouting, player development" },
-      { "year": "'19", "name": "IU Film Room", "role": "Founded a film-study site covering IU basketball" },
-      { "year": "'25", "name": "Greenwood Christian Academy", "role": "Head Boys' Basketball Coach" }
+      {
+        "year": "'13",
+        "name": "Southport Middle School",
+        "role": "First head coaching job. Broke the school wins record by year three"
+      },
+      {
+        "year": "'16",
+        "name": "Southport High School staff",
+        "role": "Assistant: scouting, player development, gameplanning"
+      },
+      {
+        "year": "'19",
+        "name": "IU Film Room",
+        "role": "Founded a film-study site covering IU basketball"
+      },
+      {
+        "year": "'25",
+        "name": "Greenwood Christian Academy",
+        "role": "Head Boys' Basketball Coach"
+      }
     ],
     "banner_title": "2026 IHSAA Class A Sectional Champions",
     "banner_sub": "Greenwood Christian Academy Cougars, first season at the helm"
@@ -29,27 +57,52 @@
   "leader": {
     "heading": "Leadership is leadership",
     "paragraphs": [
-      "I'm Senior Vice President of Operations at Keyholder Vacations, where I lead the teams and systems behind our guests' vacations. Before that I spent five years at DVC Rental Store, the largest Disney Vacation Club point-rental broker in the country, where I was named President in 2020 and led a team of 20+ through a pandemic that hit travel harder than almost any industry.",
+      "I'm Senior Vice President of Operations at Keyholder Vacations, where I lead the teams and systems behind our guests' vacations. It is the parent company of where I spent six years as President at DVC Rental Store, the largest Disney Vacation Club point-rental broker in the country.",
       "Everything I know about leading people I learned in a gym first: connect before you correct, communicate with clarity and the right tone, mesh different personalities into one culture, and lead every person the way **they** need to be led."
     ],
     "cards": [
-      { "title": "Connection first", "text": "People don't follow titles. They follow leaders who know them, invest in them, and keep an open door." },
-      { "title": "Culture is daily", "text": "A winning culture doesn't happen by accident. It's built through intentional, consistent action every single day." },
-      { "title": "Empathy + accountability", "text": "Understanding what someone is going through and holding them to a standard aren't opposites. The best leaders do both." }
+      {
+        "title": "Connection first",
+        "text": "People don't follow titles. They follow leaders who know them, invest in them, and keep an open door."
+      },
+      {
+        "title": "Culture is daily",
+        "text": "A winning culture doesn't happen by accident. It's built through intentional, consistent action every single day."
+      },
+      {
+        "title": "Empathy + accountability",
+        "text": "Understanding what someone is going through and holding them to a standard aren't opposites. The best leaders do both."
+      }
     ]
   },
   "family": {
     "heading": "The home team",
     "paragraphs": [
-      "I met Jessica in the summer of 2007, before my junior year of high school, and finally worked up the nerve to ask her out that winter. We married in May 2015. Growing up alongside my high school sweetheart has been one of the greatest gifts of my life.",
+      "I met Jess in the summer of 2007, before my junior year of high school, and finally worked up the nerve to ask her out that winter. We married in May 2015. Growing up alongside my high school sweetheart has been one of the greatest gifts of my life.",
       "Family means everything to me. No matter what else I accomplish, these four will always come first."
     ],
     "roster_title": "Starting five",
     "roster": [
-      { "number": "#1", "name": "Jessica", "role": "My better half in every way. Married May 2015" },
-      { "number": "#2", "name": "Giovanni \"Gio\"", "role": "Born 2020. Full of personality, curiosity, and heart" },
-      { "number": "#3", "name": "Luciana", "role": "Born 2021. Marches to the beat of her own drum" },
-      { "number": "#4", "name": "Lorenzo \"Enzo\"", "role": "Born 2024. The sweetest, most laid-back addition" }
+      {
+        "number": "#1",
+        "name": "Jess",
+        "role": "My better half in every way. Married May 2015"
+      },
+      {
+        "number": "#2",
+        "name": "Giovanni \"Gio\"",
+        "role": "Born 2020. Full of personality, curiosity, and heart"
+      },
+      {
+        "number": "#3",
+        "name": "Luciana \"Luci\"",
+        "role": "Born 2021. Marches to the beat of her own drum"
+      },
+      {
+        "number": "#4",
+        "name": "Lorenzo \"Enzo\"",
+        "role": "Born 2024. The sweetest, most laid-back addition"
+      }
     ]
   }
 }
