@@ -1,0 +1,10 @@
+# Preserve old WordPress URLs → new blog URLs
+/leadership/leadership-lessons-from-curt-cignetti/ /blog/leadership-lessons-from-curt-cignetti/ 301
+/uncategorized/help-me-start-year-32-in-a-meaningful-way/ /blog/help-me-start-year-32-in-a-meaningful-way/ 301
+/leadership/the-best-quotes-from-over-20-leadership-books/ /blog/the-best-quotes-from-over-20-leadership-books/ 301
+/leadership/how-coaching-high-schoolers-has-helped-me-lead-a-company/ /blog/how-coaching-high-schoolers-has-helped-me-lead-a-company/ 301
+/leadership/* /blog/:splat 301
+/uncategorized/* /blog/:splat 301
+/husband-and-father/ /about/ 301
+/business-executive/ /about/ 301
+/basketball-junkie/ /about/ 301

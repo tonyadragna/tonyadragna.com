@@ -1,0 +1,36 @@
+# CMS configuration for tonyadragna.com
+#
+# ONE THING TO EDIT before this works online:
+# replace YOUR_GITHUB_USERNAME below with your actual GitHub username
+# (the repo name must match where this site's code lives).
+
+backend:
+  name: github
+  repo: tonyadragna/tonyadragna.com
+  branch: main
+  base_url: https://api.netlify.com # uses Netlify's GitHub sign-in (see README step 4)
+
+# Lets you test the editor on your own computer with `npx decap-server`
+local_backend: true
+
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "blog"
+    label: "Blog Posts"
+    folder: "src/content/blog"
+    create: true
+    slug: "{{slug}}"
+    sortable_fields: ["date", "title"]
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        options: ["Leadership", "Basketball", "Business", "Family", "Personal"]
+        default: "Leadership"
+      - { label: "Short Description", name: "description", widget: "string", required: false, hint: "One sentence shown on the blog cards and in Google results." }
+      - { label: "Draft (hide from site)", name: "draft", widget: "boolean", default: false, required: false }
+      - { label: "Body", name: "body", widget: "markdown" }

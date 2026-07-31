@@ -1,0 +1,71 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const {
+  title,
+  description = 'Tony Adragna: business leader, basketball coach, husband, and dad in Greenwood, Indiana.',
+} = Astro.props;
+
+const path = Astro.url.pathname;
+const isActive = (href: string) =>
+  href === '/' ? path === '/' : path.startsWith(href);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap">
+        <a class="logo" href="/">Tony <span>Adragna</span></a>
+        <nav class="nav">
+          <a href="/" aria-current={isActive('/') ? 'page' : undefined}>Home</a>
+          <a href="/about/" aria-current={isActive('/about') ? 'page' : undefined}>My Story</a>
+          <a href="/blog/" aria-current={isActive('/blog') ? 'page' : undefined}>Blog</a>
+          <a class="btn" href="mailto:antadrag@gmail.com">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <div class="cols">
+          <div>
+            <div class="tag">Business Leader. Basketball Coach.<br />Husband &amp; <span>Dad.</span></div>
+          </div>
+          <ul class="socials">
+            <li><a href="https://twitter.com/coachadragna" target="_blank" rel="noopener">X / Twitter</a></li>
+            <li><a href="https://instagram.com/tonyadragna" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="https://www.facebook.com/tony.adragna/" target="_blank" rel="noopener">Facebook</a></li>
+            <li><a href="https://www.linkedin.com/in/tony-adragna-10585834" target="_blank" rel="noopener">LinkedIn</a></li>
+          </ul>
+        </div>
+        <p class="fine">© {new Date().getFullYear()} Tony Adragna · Greenwood, Indiana</p>
+      </div>
+    </footer>
+  </body>
+</html>

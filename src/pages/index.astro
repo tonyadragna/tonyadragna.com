@@ -1,0 +1,177 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, 3);
+
+const fmt = (d: Date) =>
+  d.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
+---
+
+<BaseLayout title="Tony Adragna | Business Leader | Basketball Coach | Husband & Dad">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow"><span class="kicker-line"></span>Greenwood, Indiana</p>
+      <h1>Tony <span class="accent">Adragna</span></h1>
+      <p class="tagline"><b>Business leader.</b> <b>Basketball coach.</b> Husband &amp; dad.</p>
+      <p class="lede">
+        I lead operations for a national vacation-rental company by day and the
+        Greenwood Christian Academy boys' basketball program by night, and I write
+        about what each one teaches me about the other. The best thing on my resume?
+        Jessica and our three kids.
+      </p>
+      <div class="cta-row">
+        <a class="btn" href="/blog/">Read the Blog</a>
+        <a class="btn ghost" href="/about/">My Story</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCOREBOARD -->
+  <section class="scoreboard" aria-label="Highlights">
+    <div class="wrap">
+      <div class="stat">
+        <div class="num"><em>2026</em> Sectional Champs</div>
+        <div class="label">IHSAA Class A · GCA Cougars boys basketball</div>
+      </div>
+      <div class="stat">
+        <div class="num">Head <em>Coach</em></div>
+        <div class="label">Greenwood Christian Academy · since 2025</div>
+      </div>
+      <div class="stat">
+        <div class="num">SVP of <em>Operations</em></div>
+        <div class="label">Keyholder Vacations · former company President</div>
+      </div>
+      <div class="stat">
+        <div class="num">Dad of <em>3</em></div>
+        <div class="label">Gio, Luciana &amp; Enzo. My toughest roster yet</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE COACH -->
+  <section class="section" id="coach">
+    <div class="wrap">
+      <p class="eyebrow"><span class="kicker-line"></span>The Coach</p>
+      <h2>Building a program,<br />not just a season</h2>
+      <div class="two-col">
+        <div>
+          <p class="lead">
+            In 2025 I became Head Boys' Basketball Coach at Greenwood Christian
+            Academy. In our first season together, the Cougars won the 2026 IHSAA
+            Class A sectional championship and advanced to the regional round,
+            playing our best basketball when it counted most.
+          </p>
+          <p class="lead" style="margin-top:1.25rem;">
+            Basketball has shaped my whole life: point guard and senior-year captain
+            at Southport, six years coaching in the Southport program, where my
+            middle school teams went from three wins to breaking the school's wins
+            record, and founder of IU Film Room, a film-breakdown site for Indiana
+            basketball fans.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Coaching timeline</h3>
+          <ul class="roster">
+            <li><span class="jersey">'13</span><div><div class="name">Southport Middle School</div><div class="role">First head coaching job. Broke the school wins record by year three</div></div></li>
+            <li><span class="jersey">'16</span><div><div class="name">Southport High School staff</div><div class="role">Assistant across grades 7–12: scouting, player development</div></div></li>
+            <li><span class="jersey">'19</span><div><div class="name">IU Film Room</div><div class="role">Founded a film-study site covering IU basketball</div></div></li>
+            <li><span class="jersey">'25</span><div><div class="name">Greenwood Christian Academy</div><div class="role">Head Boys' Basketball Coach</div></div></li>
+          </ul>
+        </div>
+      </div>
+      <div class="banner">
+        <div class="trophy">🏆</div>
+        <div>
+          <div class="title">2026 IHSAA Class A Sectional Champions</div>
+          <div class="sub">Greenwood Christian Academy Cougars, first season at the helm</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE LEADER -->
+  <section class="section" id="leader">
+    <div class="wrap">
+      <p class="eyebrow"><span class="kicker-line"></span>The Business Leader</p>
+      <h2>Leadership is leadership</h2>
+      <p class="lead">
+        I'm Senior Vice President of Operations at Keyholder Vacations, where I lead
+        the teams and systems behind our guests' vacations. Before that I spent five
+        years at DVC Rental Store, the largest Disney Vacation Club point-rental
+        broker in the country, where I was named President in 2020 and led a team of
+        20+ through a pandemic that hit travel harder than almost any industry.
+      </p>
+      <p class="lead" style="margin-top:1.25rem;">
+        Everything I know about leading people I learned in a gym first: connect
+        before you correct, communicate with clarity and the right tone, mesh
+        different personalities into one culture, and lead every person the way
+        <em>they</em> need to be led.
+      </p>
+      <div class="card-grid">
+        <div class="card"><h3>Connection first</h3><p>People don't follow titles. They follow leaders who know them, invest in them, and keep an open door.</p></div>
+        <div class="card"><h3>Culture is daily</h3><p>A winning culture doesn't happen by accident. It's built through intentional, consistent action every single day.</p></div>
+        <div class="card"><h3>Empathy + accountability</h3><p>Understanding what someone is going through and holding them to a standard aren't opposites. The best leaders do both.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE FAMILY -->
+  <section class="section" id="family">
+    <div class="wrap">
+      <p class="eyebrow"><span class="kicker-line"></span>The Family</p>
+      <h2>The home team</h2>
+      <div class="two-col">
+        <div>
+          <p class="lead">
+            I met Jessica in the summer of 2007, before my junior year of high
+            school, and finally worked up the nerve to ask her out that winter. We
+            married in May 2015. Growing up alongside my high school sweetheart has
+            been one of the greatest gifts of my life.
+          </p>
+          <p class="lead" style="margin-top:1.25rem;">
+            Family means everything to me. No matter what else I accomplish, these
+            four will always come first.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Starting five</h3>
+          <ul class="roster">
+            <li><span class="jersey">#1</span><div><div class="name">Jessica</div><div class="role">My better half in every way. Married May 2015</div></div></li>
+            <li><span class="jersey">#2</span><div><div class="name">Giovanni "Gio"</div><div class="role">Born 2020. Full of personality, curiosity, and heart</div></div></li>
+            <li><span class="jersey">#3</span><div><div class="name">Luciana</div><div class="role">Born 2021. Marches to the beat of her own drum</div></div></li>
+            <li><span class="jersey">#4</span><div><div class="name">Lorenzo "Enzo"</div><div class="role">Born 2024. The sweetest, most laid-back addition</div></div></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOG -->
+  <section class="section" id="blog">
+    <div class="wrap">
+      <p class="eyebrow"><span class="kicker-line"></span>From the Blog</p>
+      <h2>Notes on leadership</h2>
+      <p class="lead">Lessons from the gym, the office, and everywhere in between.</p>
+      <div class="post-grid">
+        {posts.map((post) => (
+          <a class="post-card" href={`/blog/${post.id}/`}>
+            <div class="meta">
+              <span class="cat">{post.data.category}</span>
+              <span>{fmt(post.data.date)}</span>
+            </div>
+            <h3>{post.data.title}</h3>
+            {post.data.description && <p>{post.data.description}</p>}
+            <span class="read">Read post →</span>
+          </a>
+        ))}
+      </div>
+      <div style="margin-top:2.5rem;">
+        <a class="btn ghost" href="/blog/">All posts</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
