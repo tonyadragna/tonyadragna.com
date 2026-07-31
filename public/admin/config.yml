@@ -6,7 +6,7 @@
 
 backend:
   name: github
-  repo: tonyadragna/tonyadragna.com
+  repo: YOUR_GITHUB_USERNAME/tonyadragna.com
   branch: main
   base_url: https://api.netlify.com # uses Netlify's GitHub sign-in (see README step 4)
 
@@ -17,6 +17,88 @@ media_folder: "public/images/uploads"
 public_folder: "/images/uploads"
 
 collections:
+  - name: "pages"
+    label: "Site Pages"
+    files:
+      - name: "home"
+        label: "Homepage"
+        file: "src/data/home.json"
+        fields:
+          - label: "Hero (top of page)"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Small orange line", name: "eyebrow", widget: "string" }
+              - { label: "Tagline", name: "tagline", widget: "string", hint: "Wrap words in ** to make them stand out bright white" }
+              - { label: "Intro paragraph", name: "lede", widget: "text" }
+          - label: "Stat strip (the 4 boxes)"
+            name: "stats"
+            widget: "list"
+            min: 4
+            max: 4
+            fields:
+              - { label: "Headline", name: "headline", widget: "string", hint: "Wrap the word that should be orange in **" }
+              - { label: "Small detail line", name: "detail", widget: "string" }
+          - label: "The Coach section"
+            name: "coach"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - label: "Paragraphs"
+                name: "paragraphs"
+                widget: "list"
+                field: { label: "Paragraph", name: "paragraph", widget: "text" }
+              - { label: "Timeline card title", name: "timeline_title", widget: "string" }
+              - label: "Timeline entries"
+                name: "timeline"
+                widget: "list"
+                fields:
+                  - { label: "Year", name: "year", widget: "string" }
+                  - { label: "Name", name: "name", widget: "string" }
+                  - { label: "Description", name: "role", widget: "string" }
+              - { label: "Trophy banner title", name: "banner_title", widget: "string" }
+              - { label: "Trophy banner subtitle", name: "banner_sub", widget: "string" }
+          - label: "The Business Leader section"
+            name: "leader"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - label: "Paragraphs"
+                name: "paragraphs"
+                widget: "list"
+                field: { label: "Paragraph", name: "paragraph", widget: "text" }
+              - label: "The 3 cards"
+                name: "cards"
+                widget: "list"
+                min: 3
+                max: 3
+                fields:
+                  - { label: "Card title", name: "title", widget: "string" }
+                  - { label: "Card text", name: "text", widget: "text" }
+          - label: "The Family section"
+            name: "family"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - label: "Paragraphs"
+                name: "paragraphs"
+                widget: "list"
+                field: { label: "Paragraph", name: "paragraph", widget: "text" }
+              - { label: "Family card title", name: "roster_title", widget: "string" }
+              - label: "Family members"
+                name: "roster"
+                widget: "list"
+                fields:
+                  - { label: "Number (e.g. #1)", name: "number", widget: "string" }
+                  - { label: "Name", name: "name", widget: "string" }
+                  - { label: "Description", name: "role", widget: "string" }
+      - name: "about"
+        label: "My Story page"
+        file: "src/content/pages/about.md"
+        fields:
+          - { label: "Headline", name: "title", widget: "string", hint: "Wrap the word that should be orange in **" }
+          - { label: "Intro paragraph", name: "intro", widget: "text", required: false }
+          - { label: "Page content", name: "body", widget: "markdown" }
   - name: "blog"
     label: "Blog Posts"
     folder: "src/content/blog"

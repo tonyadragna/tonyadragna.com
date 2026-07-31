@@ -342,6 +342,7 @@ h1, h2, h3, .display {
     var(--ink);
 }
 .page-hero h1 { font-size: clamp(2.8rem, 7vw, 4.5rem); margin-top: 0.75rem; }
+.page-hero h1 em { color: var(--orange); font-style: normal; }
 .page-hero p { color: var(--muted); max-width: 44rem; margin-top: 1rem; }
 
 /* ---------- article / prose ---------- */
